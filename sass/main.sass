@@ -120,6 +120,7 @@ $light-grey: #777
     text-shadow: 0px 0px 30px rgba(0,0,0,0.3)
     @media screen and (min-width: 767px)
         max-width: 66.66%
+        font-size: 2.5em
     @media screen and (min-width: 1078px)
         font-size: 3em
         line-height: 1.2em
@@ -137,16 +138,81 @@ $light-grey: #777
 
 // Homepage search widget
 .jr-search
-    padding: 30px   
+    padding: 20px   
+    border-radius: 1px
     @media screen and (min-width: 767px)
         background-color: white
         margin-top: -50px
-
+        padding: 30px
         position: relative
         z-index: 3
-
     form
         display: flex
         input.s
             flex: 1
             padding: 19px
+
+// Directory grid
+.jr-directory
+    padding: 10px 0px
+    @media screen and (min-width: 480px)
+        padding: 20px 0px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 30px
+        grid-row-gap: 20px
+    @media screen and (min-width: 767px)
+        padding: 40px 0px
+        grid-template-columns: 1fr 1fr 1fr
+
+.jr-directory__link:hover
+    .jr-directory__headline
+        filter: brightness(1.2) 
+
+.jr-directory__headline
+    color: $brand-green
+    text-decoration: underline
+    margin-bottom: 5px
+
+
+// Advice articles list
+.jr-advice
+    padding: 10px 0px
+    @media screen and (min-width: 480px)
+        padding: 20px 0px
+
+.jr-advice__section-title
+    font-weight: bold
+    margin-bottom: 20px
+    @media screen and (min-width: 767px)
+        font-size: 2.5em
+    @media screen and (min-width: 1078px)
+        font-size: 3em
+        line-height: 1.2em
+
+.jr-advice__list
+    margin: 20px 0px
+    @media screen and (min-width: 767px)
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 30px
+
+.jr-advice__image
+    margin-bottom: 15px
+    object-fit: cover
+    width: 100%
+    height: 180px
+    border-radius: 1px
+
+.jr-advice__link:hover
+    .jr-advice__headline
+        filter: brightness(1.2)  
+
+.jr-advice__headline
+    margin-bottom: 5px
+    color: $brand-green
+    text-decoration: underline
+
+.jr-advice__excerpt
+    margin-top: 5px
+    margin-bottom: 30px

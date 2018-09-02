@@ -10,4 +10,5 @@ add_action( 'wp_enqueue_scripts', function () {
 // Support a custom logo
 add_theme_support( 'custom-logo' );
 
-// Add homepage customisation options to the customiser
+// Add options to the customiser
+require_once 'customiser.php';
