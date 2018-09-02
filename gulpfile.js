@@ -3,9 +3,9 @@ const sass = require("gulp-sass")
 
 // Compile SASS
 gulp.task("sass", ()=>{
-    return gulp.src("src/style.sass")
+    return gulp.src("sass/*.sass")
         .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest("dist"))
+        .pipe(gulp.dest("css"))
 })
 
 gulp.task("default", ()=>{

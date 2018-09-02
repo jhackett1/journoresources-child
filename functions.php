@@ -7,4 +7,7 @@ add_action( 'wp_enqueue_scripts', function () {
     wp_enqueue_style( 'child-style', get_stylesheet_uri() );    
 } );
 
+// Support a custom logo
 add_theme_support( 'custom-logo' );
+
+// Add homepage customisation options to the customiser

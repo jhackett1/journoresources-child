@@ -15,14 +15,26 @@
     <div class="wrapper">
 
         <header class="jr-header" >
-            <div class="jr-header__branding">
-                <?php the_custom_logo(); ?>
-                <h1><?php echo get_bloginfo( 'name' ); ?></h1>
+
+            <div class="container js-header__inner">
+                <div class="jr-header__branding">
+                    <?php the_custom_logo(); ?>
+                    <h1 class="jr-header__slogan">Journo<br/>Resources</h1>
+                </div>
+
+                <!-- <button class="jr-header__menu-toggle">Menu</button> -->
+
+                <nav class="jr-header__nav">
+                    <?php wp_nav_menu(array(
+                        'menu'=> 'primary',
+                        'menu_class'=> 'jr-header__nav-menu',
+                        'container' => false
+                    )) ?>
+                </nav>
             </div>
-            <nav class="jr-header__nav">
-                <?php wp_nav_menu('primary') ?>
-            </nav>
         </header>
 
-        <div id="main">
-        <div class="container clearfix">
+        <?php if(!is_front_page()){ ?>
+            <div id="main">
+            <div class="container clearfix">            
+        <?php }?>
