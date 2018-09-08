@@ -19,10 +19,8 @@
             <div class="container js-header__inner">
                 <div class="jr-header__branding">
                     <?php the_custom_logo(); ?>
-                    <h1 class="jr-header__slogan">Journo<br/>Resources</h1>
+                    <a href="<?php echo bloginfo('url'); ?>"><h1 class="jr-header__slogan">Journo<br/>Resources</h1></a>
                 </div>
-
-                <!-- <button class="jr-header__menu-toggle">Menu</button> -->
 
                 <nav class="jr-header__nav">
                     <?php wp_nav_menu(array(
@@ -34,7 +32,10 @@
             </div>
         </header>
 
-        <?php if(!is_front_page()){ ?>
+        <?php if(is_front_page()){ ?>
+        <?php } else if(is_single() && get_post_meta( $post->ID, 'interface_sidebarlayout', 'true') == 'long-read'){ ?>
+        <?php } else if(is_archive() && is_category('advice')){ ?>
+        <?php } else { ?>
             <div id="main">
             <div class="container clearfix">            
         <?php }?>
