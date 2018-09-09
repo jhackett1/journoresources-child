@@ -34,7 +34,7 @@ add_action('customize_register', function ($wp_customize){
         'type'       => 'dropdown-pages'
     ) );
     $wp_customize->add_control(
-        new WP_Customize_Image_Control($wp_customize, 'jr-headline-image-control', array(
+        new WP_Customize_Image_Control($wp_customize, 'jr-hero-image-control', array(
                 'label'      => __( 'Background image', 'jr' ),
                 'section'    => 'jr-hero',
                 'settings'   => 'jr-hero-image',

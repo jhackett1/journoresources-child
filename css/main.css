@@ -34,6 +34,10 @@
     align-items: flex-end;
     justify-content: space-between; } }
 
+.js-header__inner img {
+  width: 85px;
+  max-width: 85px; }
+
 @media screen and (min-width: 767px) {
   .jr-header__branding {
     display: flex;
@@ -75,6 +79,7 @@
     position: absolute;
     top: 30px;
     z-index: 999;
+    min-width: 125px;
     left: -15px;
     background: #34A295;
     display: none; }
@@ -314,7 +319,9 @@
 .jr-footer__logo {
   filter: grayscale(1);
   opacity: 0.4;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  width: 85px;
+  max-width: 85px; }
 
 .jr-footer__social {
   margin-top: 15px; }

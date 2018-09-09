@@ -53,7 +53,7 @@ add_action('customize_register', function ($wp_customize){
     $wp_customize->add_control(
         'jr-advice-widget-control', 
         array(
-            'label'    => __( 'Display widget area in grid of posts?', 'jr' ),
+            'label'    => __( 'Display widget areas in grid of posts?', 'jr' ),
             'section'  => 'jr-advice',
             'settings' => 'jr-advice-widget',
             'type'     => 'checkbox'
