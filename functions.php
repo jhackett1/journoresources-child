@@ -43,9 +43,18 @@ register_sidebar( array (
     'after_title' => '</h5>',
     ) );
 register_sidebar( array (
-    'name' => __( 'Advice Category Page'),
+    'name' => __( 'First Row, Advice Category Page'),
     'id' => 'jr-advice-page',
-    'description' => __( 'Embedded in the grid of posts on the Advice category page'),
+    'description' => __( 'The small area on the top row'),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h5 class="widget__title">',
+    'after_title' => '</h5>',
+    ) );
+register_sidebar( array (
+    'name' => __( 'Second Row, Advice Category Page'),
+    'id' => 'jr-advice-page-tall',
+    'description' => __( 'The tall area on the second and third rows'),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h5 class="widget__title">',
