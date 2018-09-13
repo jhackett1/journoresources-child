@@ -43,13 +43,6 @@
         </article> 
     <?php }; ?>     
 
-    <?php if(get_theme_mod('jr-directory-service-4-name') && get_theme_mod('jr-directory-service-4-description') && get_theme_mod('jr-directory-service-4-href')){?> 
-        <article class="jr-directory__service">
-            <a href="<?php echo get_page_link(get_theme_mod('jr-directory-service-4-href')); ?>" class="jr-directory__link"><h4 class="jr-directory__headline"><?php echo get_theme_mod('jr-directory-service-4-name') ?></h4></a>
-            <p class="jr-directory__description"><?php echo get_theme_mod('jr-directory-service-4-description') ?></p>
-        </article> 
-    <?php }; ?>  
-
     <?php if(get_theme_mod('jr-directory-service-5-name') && get_theme_mod('jr-directory-service-5-description') && get_theme_mod('jr-directory-service-5-href')){?> 
         <article class="jr-directory__service">
             <a href="<?php echo get_page_link(get_theme_mod('jr-directory-service-5-href')); ?>" class="jr-directory__link"><h4 class="jr-directory__headline"><?php echo get_theme_mod('jr-directory-service-5-name') ?></h4></a>
@@ -85,6 +78,13 @@
         </article> 
     <?php }; ?> 
 
+    <?php if(get_theme_mod('jr-directory-service-4-name') && get_theme_mod('jr-directory-service-4-description')){?> 
+        <article class="jr-directory__service">
+            <a href="<?php echo get_category_link(get_theme_mod('jr-advice-category')); ?>" class="jr-directory__link"><h4 class="jr-directory__headline"><?php echo get_theme_mod('jr-directory-service-4-name') ?></h4></a>
+            <p class="jr-directory__description"><?php echo get_theme_mod('jr-directory-service-4-description') ?></p>
+        </article> 
+    <?php }; ?>  
+
 
 </section>
 
@@ -111,7 +111,7 @@
         <p><?php esc_html_e( 'Sorry, no posts to show.' ); ?></p>
     <?php endif; ?>
     
-    <a href="<? echo get_category_link(get_theme_mod('jr-advice-category')); ?>" class="jr-advice__button jr-button">More <? echo get_cat_name(get_theme_mod('jr-advice-category')); ?> →</a>    
+    <a href="<?php echo get_category_link(get_theme_mod('jr-advice-category')); ?>" class="jr-advice__button jr-button">More <? echo get_cat_name(get_theme_mod('jr-advice-category')); ?> →</a>    
 </section>
 
 <?php get_template_part('cta'); ?>

@@ -24,14 +24,21 @@
                 </div>
 
                 <nav class="jr-header__nav">
-                    <?php wp_nav_menu(array(
-                        'menu'=> 'primary',
+                    <?php wp_nav_menu( array( 
+						'theme_location' => 'primary',
                         'menu_class'=> 'jr-header__nav-menu',
                         'container' => false
                     )) ?>
                 </nav>
             </div>
         </header>
+
+
+        <?php if(!is_front_page() && is_page()){ ?>
+            <div class="container">    
+                <h1 class="jr-page-title"><?php echo interface_header_title(); ?></h1>
+            </div>
+        <?php } ?>
 
         <?php if(is_front_page()){ ?>
         <?php } else if(is_single() && get_post_meta( $post->ID, 'interface_sidebarlayout', 'true') == 'long-read'){ ?>

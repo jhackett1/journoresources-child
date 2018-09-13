@@ -54,6 +54,11 @@
     <?php previous_posts_link( '← Newer articles' ); ?>
     <?php next_posts_link( 'Older articles →' ); ?>
     </section>
+	<?php else: ?>
+    <div class="container">
+	    <h1 class="jr-page-title">No posts to show</h1>
+   		<p class="jr-page-description">There's nothing to see here yet.</p>
+	</div>
     <?php endif; ?>
 
 <?php get_template_part('cta'); ?>

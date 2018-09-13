@@ -14,8 +14,8 @@ add_action('customize_register', function ($wp_customize){
     $wp_customize->add_setting( 'jr-directory-service-3-href', array('default' => '') );
     $wp_customize->add_setting( 'jr-directory-service-3-description', array('default' => '') );
 
+    // Different because advice
     $wp_customize->add_setting( 'jr-directory-service-4-name', array('default' => '') );
-    $wp_customize->add_setting( 'jr-directory-service-4-href', array('default' => '') );
     $wp_customize->add_setting( 'jr-directory-service-4-description', array('default' => '') );
 
     $wp_customize->add_setting( 'jr-directory-service-5-name', array('default' => '') );
@@ -99,28 +99,6 @@ add_action('customize_register', function ($wp_customize){
         'settings'   => 'jr-directory-service-3-description',
         'type'       => 'textarea'
     ) );    
-
-
-
-    $wp_customize->add_control( 'jr-directory-service-4-name-control', array(
-        'label'      => __( 'Service 4 name', 'jr' ),
-        'section'    => 'jr-directory',
-        'settings'   => 'jr-directory-service-4-name',
-        'type'       => 'text'
-    ) );
-    $wp_customize->add_control( 'jr-directory-service-4-href-control', array(
-        'label'      => __( 'Service 4 links to...', 'jr' ),
-        'section'    => 'jr-directory',
-        'settings'   => 'jr-directory-service-4-href',
-        'type'       => 'dropdown-pages'
-    ) );
-    $wp_customize->add_control( 'jr-directory-service-4-description-control', array(
-        'label'      => __( 'Service 4 description', 'jr' ),
-        'section'    => 'jr-directory',
-        'settings'   => 'jr-directory-service-4-description',
-        'type'       => 'textarea'
-    ) );    
-
 
 
     $wp_customize->add_control( 'jr-directory-service-5-name-control', array(
@@ -224,5 +202,21 @@ add_action('customize_register', function ($wp_customize){
         'section'    => 'jr-directory',
         'settings'   => 'jr-directory-service-9-description',
         'type'       => 'textarea'
-    ) );  
+    ) ); 
+    
+    
+    $wp_customize->add_control( 'jr-directory-service-4-name-control', array(
+        'label'      => __( 'Advice name', 'jr' ),
+        'section'    => 'jr-directory',
+        'settings'   => 'jr-directory-service-4-name',
+        'type'       => 'text'
+    ) );
+    $wp_customize->add_control( 'jr-directory-service-4-description-control', array(
+        'label'      => __( 'Advice description', 'jr' ),
+        'section'    => 'jr-directory',
+        'settings'   => 'jr-directory-service-4-description',
+        'type'       => 'textarea'
+    ) ); 
+
+
 });
